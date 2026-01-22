@@ -4,6 +4,13 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x86;x64</Platforms>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Shared\Routinner.Communication\Routinner.Communication.csproj" />
+    <ProjectReference Include="..\..\Shared\Routinner.Exception\Routinner.Exception.csproj" />
+    <ProjectReference Include="..\Routinner.Domain\Routinner.Domain.csproj" />
+  </ItemGroup>
 
 </Project>
