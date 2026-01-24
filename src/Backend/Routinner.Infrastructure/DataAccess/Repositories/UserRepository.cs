@@ -1,17 +1,18 @@
-﻿using Routinner.Domain.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Routinner.Domain.Entities;
 using Routinner.Domain.Repositories;
 
 namespace Routinner.Infrastructure.DataAccess.Repositories;
 
 internal class UserRepository : IUserReadOnlyRepository, IUserWriteOnlyRepository
 {
-    public Task Add(User user)
+    private readonly RoutinnerDbContext _dbContext;
+    public UserRepository(RoutinnerDbContext dbContext)
     {
-        throw new NotImplementedException();
+        _dbContext = dbContext;
     }
+    public async Task Add(User user) => await _dbContext.Users.AddAsync(user);
 
-    public Task<bool> ExistActiveUserWithEmail(string email)
-    {
-        throw new NotImplementedException();
-    }
+    public async Task<bool> ExistActiveUserWithEmail(string email) 
+        => await _dbContext.Users.AnyAsync(user => user.Email.Equals(email) && user.Active);
 }
