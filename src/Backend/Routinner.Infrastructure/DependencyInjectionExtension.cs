@@ -1,6 +1,10 @@
 ﻿using FluentMigrator.Runner;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Routinner.Domain.Repositories;
+using Routinner.Infrastructure.DataAccess;
+using Routinner.Infrastructure.DataAccess.Repositories;
 using Routinner.Infrastructure.Extensions;
 using System.Reflection;
 
@@ -11,6 +15,24 @@ public static class DependencyInjectionExtension
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
         AddFluentMigrator(services, configuration);
+        AddDbContext(services, configuration);
+        AddRepositories(services);
+    }
+
+    private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
+    {
+        var connectionString = configuration.ConnectionString();
+
+        services.AddDbContext<RoutinnerDbContext>(options =>
+        {
+            options.UseSqlServer(connectionString);
+        });
+    }
+    private static void AddRepositories(IServiceCollection services)
+    {
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<IUserReadOnlyRepository, UserRepository>();
+        services.AddScoped<IUserWriteOnlyRepository, UserRepository>();
     }
     private static void AddFluentMigrator(IServiceCollection services, IConfiguration configuration)
     {
