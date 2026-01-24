@@ -1,4 +1,5 @@
 using Routinner.Api.Filters;
+using Routinner.Api.Middlewares;
 using Routinner.Infrastructure;
 using Routinner.Infrastructure.Extensions;
 using Routinner.Infrastructure.Migrations;
@@ -8,7 +9,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructure(builder.Configuration);
@@ -23,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseMiddleware<CultureMiddleware>();
 
 app.UseHttpsRedirection();
 
