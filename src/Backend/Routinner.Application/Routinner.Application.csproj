@@ -8,13 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Shared\Routinner.Communication\Routinner.Communication.csproj" />
-    <ProjectReference Include="..\..\Shared\Routinner.Exception\Routinner.Exception.csproj" />
-    <ProjectReference Include="..\Routinner.Domain\Routinner.Domain.csproj" />
+    <PackageReference Include="Mapster" Version="7.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\..\Shared\Routinner.Communication\Routinner.Communication.csproj" />
+    <ProjectReference Include="..\..\Shared\Routinner.Exception\Routinner.Exception.csproj" />
+    <ProjectReference Include="..\Routinner.Domain\Routinner.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,9 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Routinner.Domain.Repositories;
+using Routinner.Domain.Security.Cryptography;
 using Routinner.Infrastructure.DataAccess;
 using Routinner.Infrastructure.DataAccess.Repositories;
 using Routinner.Infrastructure.Extensions;
+using Routinner.Infrastructure.Security.Cryptography;
 using System.Reflection;
 
 namespace Routinner.Infrastructure;
@@ -17,6 +19,7 @@ public static class DependencyInjectionExtension
         AddFluentMigrator(services, configuration);
         AddDbContext(services, configuration);
         AddRepositories(services);
+        AddPasswordHasher(services);
     }
 
     private static void AddDbContext(IServiceCollection services, IConfiguration configuration)
@@ -33,6 +36,10 @@ public static class DependencyInjectionExtension
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IUserReadOnlyRepository, UserRepository>();
         services.AddScoped<IUserWriteOnlyRepository, UserRepository>();
+    }
+    private static void AddPasswordHasher(IServiceCollection services)
+    {
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
     }
     private static void AddFluentMigrator(IServiceCollection services, IConfiguration configuration)
     {
