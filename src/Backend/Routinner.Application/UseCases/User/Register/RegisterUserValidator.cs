@@ -1,0 +1,20 @@
+﻿using FluentValidation;
+using Routinner.Communication.Requests;
+using Routinner.Exception;
+
+namespace Routinner.Application.UseCases.User.Register;
+
+public class RegisterUserValidator : AbstractValidator<RequestRegisterUserJson>
+{
+    public RegisterUserValidator()
+    {
+        RuleFor(user => user.Name).NotEmpty().WithMessage(ResourceMessagesException.NAME_EMPTY);
+        RuleFor(user => user.Email).NotEmpty().WithMessage(ResourceMessagesException.EMAIL_EMPTY);
+        RuleFor(user => user.Password.Length).GreaterThan(6).WithMessage(ResourceMessagesException.INVALID_PASSWORD);
+        When(user => string.IsNullOrWhiteSpace(user.Email), () =>
+        {
+
+            RuleFor(user => user.Email).EmailAddress().WithMessage(ResourceMessagesException.INVALID_EMAIL);
+        });
+    }
+}
