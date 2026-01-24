@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Routinner.Application.UseCases.User.Register;
+using Routinner.Communication.Requests;
 using Routinner.Communication.Responses;
 
 namespace Routinner.Api.Controllers;
@@ -10,8 +12,12 @@ public class UserController : ControllerBase
     [HttpPost]
     [ProducesResponseType(typeof(ResponseRegisteredUserJson), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(ResponseErrorMessagesJson), StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> Register()
+    public async Task<IActionResult> Register(
+        [FromServices] IRegisterUserUseCase useCase,
+        [FromBody] RequestRegisterUserJson request)
     {
-        return Ok();
+        var response = await useCase.Execute(request);
+
+        return Created(string.Empty, response);
     }
 }

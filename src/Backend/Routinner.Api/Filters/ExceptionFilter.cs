@@ -17,7 +17,7 @@ public class ExceptionFilter : IExceptionFilter
     }
     private static void HandleProjectException(RoutinnerException routinnerException, ExceptionContext context)
     {
-        context.HttpContext.Response.StatusCode = (int)routinnerException.StatusCode;
+        context.HttpContext.Response.StatusCode = routinnerException.StatusCode;
         context.Result = new ObjectResult(new ResponseErrorMessagesJson(routinnerException.GetErrors()));
     }
     private static void ThrowUnknowError(ExceptionContext context)
