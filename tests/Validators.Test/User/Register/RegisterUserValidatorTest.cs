@@ -54,7 +54,7 @@ public class RegisterUserValidatorTest
     {
         var validator = new RegisterUserValidator();
         var request = RequestRegisterUserJsonBuilder.Build();
-        request.Email = "email.com";   
+        request.Email = "email.com";
 
         var result = validator.Validate(request);
 
@@ -72,7 +72,7 @@ public class RegisterUserValidatorTest
     [InlineData(4)]
     [InlineData(5)]
     [InlineData(6)]
-    public void Error_Password_Invalid(int passwordLength)    
+    public void Error_Password_Invalid(int passwordLength)
     {
         var validator = new RegisterUserValidator();
         var request = RequestRegisterUserJsonBuilder.Build(passwordLength);
