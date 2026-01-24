@@ -1,3 +1,4 @@
+using Routinner.Api.Filters;
 using Routinner.Infrastructure;
 using Routinner.Infrastructure.Extensions;
 using Routinner.Infrastructure.Migrations;
@@ -12,6 +13,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddInfrastructure(builder.Configuration);
 
+builder.Services.AddMvc(opt => opt.Filters.Add<ExceptionFilter>());
 
 var app = builder.Build();
 
