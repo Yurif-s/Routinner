@@ -13,4 +13,8 @@
     <ProjectReference Include="..\Routinner.Domain\Routinner.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
