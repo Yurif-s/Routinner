@@ -9,6 +9,6 @@ public abstract class VersionsBase : ForwardOnlyMigration
     {
         return Create.Table(table)
             .WithColumn("Id").AsInt64().PrimaryKey().Identity()
-            .WithColumn("CreateOn").AsDateTime().NotNullable();
+            .WithColumn("CreatedOn").AsDateTime().NotNullable();
     }
 }
