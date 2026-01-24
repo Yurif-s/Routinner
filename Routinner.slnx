@@ -27,6 +27,11 @@
     </Project>
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/CommonTestUtilities/CommonTestUtilities.csproj" Id="476b0c04-3325-4a22-be54-29a15a6ef243" />
+    <Project Path="tests/CommonTestUtilities/CommonTestUtilities.csproj" Id="57529222-8a25-41c2-97be-7369f4ce0048">
+      <Platform Solution="Debug|x64" Project="x64" />
+    </Project>
+    <Project Path="Validators.Test/Validators.Test.csproj" Id="bb120291-0ce5-47d6-8d5c-194606fe5256">
+      <Platform Solution="Debug|x64" Project="x64" />
+    </Project>
   </Folder>
 </Solution>
