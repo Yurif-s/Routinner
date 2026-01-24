@@ -26,5 +26,7 @@
       <Platform Solution="*|x64" Project="x64" />
     </Project>
   </Folder>
-  <Folder Name="/tests/" />
+  <Folder Name="/tests/">
+    <Project Path="tests/CommonTestUtilities/CommonTestUtilities.csproj" Id="476b0c04-3325-4a22-be54-29a15a6ef243" />
+  </Folder>
 </Solution>
