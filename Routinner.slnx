@@ -30,6 +30,9 @@
     <Project Path="tests/CommonTestUtilities/CommonTestUtilities.csproj" Id="57529222-8a25-41c2-97be-7369f4ce0048">
       <Platform Solution="Debug|x64" Project="x64" />
     </Project>
+    <Project Path="tests/UseCases.Test/UseCases.Test.csproj" Id="1c0eefa7-509b-414d-b2e1-88ff252e5ee9">
+      <Platform Solution="Debug|x64" Project="x64" />
+    </Project>
     <Project Path="tests/Validators.Test/Validators.Test.csproj" Id="51c0a753-7a3f-4926-85ff-aa327ca25f14">
       <Platform Solution="Debug|x64" Project="x64" />
     </Project>
