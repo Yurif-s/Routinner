@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Routinner.Domain.Entities;
+using System.Runtime.CompilerServices;
 
+[assembly: InternalsVisibleTo("WebApi.Test")]
 namespace Routinner.Infrastructure.DataAccess;
 
 internal class RoutinnerDbContext : DbContext

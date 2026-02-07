@@ -16,9 +16,11 @@ public static class DependencyInjectionExtension
 {
     public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
+        AddRepositories(services);
+        if (configuration.IsUnitTestEnviroment())
+            return;
         AddFluentMigrator(services, configuration);
         AddDbContext(services, configuration);
-        AddRepositories(services);
         AddPasswordHasher(services);
     }
 
