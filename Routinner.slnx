@@ -36,6 +36,8 @@
     <Project Path="tests/Validators.Test/Validators.Test.csproj" Id="51c0a753-7a3f-4926-85ff-aa327ca25f14">
       <Platform Solution="Debug|x64" Project="x64" />
     </Project>
-    <Project Path="tests/WebApi.Test/WebApi.Test.csproj" Id="36c89ef1-2b94-4ae4-a253-ddb4f8126daf" />
+    <Project Path="tests/WebApi.Test/WebApi.Test.csproj" Id="36c89ef1-2b94-4ae4-a253-ddb4f8126daf">
+      <Platform Solution="Debug|x64" Project="x64" />
+    </Project>
   </Folder>
 </Solution>
