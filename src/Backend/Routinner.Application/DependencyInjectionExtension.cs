@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Routinner.Application.Services.Mappings;
+using Routinner.Application.UseCases.Routine.Register;
 using Routinner.Application.UseCases.User.Register;
 
 namespace Routinner.Application;
@@ -19,5 +20,6 @@ public static class DependencyInjectionExtension
     private static void AddUseCases(IServiceCollection services)
     {
         services.AddScoped<IRegisterUserUseCase, RegisterUserUseCase>();
+        services.AddScoped<IRegisterRoutineUsecase, RegisterRoutineUseCase>();
     }
 }

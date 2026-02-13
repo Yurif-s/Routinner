@@ -3,6 +3,7 @@ using Mapster;
 using Routinner.Communication.Requests;
 using Routinner.Communication.Responses;
 using Routinner.Domain.Repositories;
+using Routinner.Domain.Repositories.User;
 using Routinner.Domain.Security.Cryptography;
 using Routinner.Exception;
 using Routinner.Exception.ExceptionsBase;

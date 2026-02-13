@@ -1,4 +1,4 @@
-﻿namespace Routinner.Domain.Repositories;
+﻿namespace Routinner.Domain.Repositories.User;
 
 public interface IUserReadOnlyRepository
 {
