@@ -123,6 +123,9 @@
   <data name="EMAIL_EMPTY" xml:space="preserve">
     <value>The email cannot be empty.</value>
   </data>
+  <data name="END_DATE_GREATHER_START_DATE" xml:space="preserve">
+    <value>End date must be greater than to start date.</value>
+  </data>
   <data name="INVALID_EMAIL" xml:space="preserve">
     <value>The email is invalid.</value>
   </data>
@@ -132,7 +135,16 @@
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>The name cannot be empty.</value>
   </data>
+  <data name="START_DATE_CANNOT_PAST" xml:space="preserve">
+    <value>Start date cannot be in the past.</value>
+  </data>
+  <data name="START_DATE_INVALID" xml:space="preserve">
+    <value>Start date is invalid.</value>
+  </data>
   <data name="UNKNOW_ERROR" xml:space="preserve">
     <value>Unknow error.</value>
+  </data>
+  <data name="END_DATE_INVALID" xml:space="preserve">
+    <value>End date is invalid.</value>
   </data>
 </root>

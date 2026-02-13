@@ -123,6 +123,9 @@
   <data name="EMAIL_EMPTY" xml:space="preserve">
     <value>O email não pode estar vazio.</value>
   </data>
+  <data name="END_DATE_GREATHER_START_DATE" xml:space="preserve">
+    <value>Data de término deve ser maior que a data de início.</value>
+  </data>
   <data name="INVALID_EMAIL" xml:space="preserve">
     <value>O email é inválido.</value>
   </data>
@@ -132,7 +135,16 @@
   <data name="NAME_EMPTY" xml:space="preserve">
     <value>O nome não pode estar vazio.</value>
   </data>
+  <data name="START_DATE_CANNOT_PAST" xml:space="preserve">
+    <value>Data de início não pode ser no passado.</value>
+  </data>
+  <data name="START_DATE_INVALID" xml:space="preserve">
+    <value>Data de início é inválida.</value>
+  </data>
   <data name="UNKNOW_ERROR" xml:space="preserve">
     <value>Erro desconhecido.</value>
+  </data>
+  <data name="END_DATE_INVALID" xml:space="preserve">
+    <value>Data de término é inválida.</value>
   </data>
 </root>

@@ -79,6 +79,24 @@ namespace Routinner.Exception {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a End date must be greater than to start date..
+        /// </summary>
+        public static string END_DATE_GREATHER_START_DATE {
+            get {
+                return ResourceManager.GetString("END_DATE_GREATHER_START_DATE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a End date is invalid..
+        /// </summary>
+        public static string END_DATE_INVALID {
+            get {
+                return ResourceManager.GetString("END_DATE_INVALID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email is invalid..
         /// </summary>
         public static string INVALID_EMAIL {
@@ -102,6 +120,24 @@ namespace Routinner.Exception {
         public static string NAME_EMPTY {
             get {
                 return ResourceManager.GetString("NAME_EMPTY", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Start date cannot be in the past..
+        /// </summary>
+        public static string START_DATE_CANNOT_PAST {
+            get {
+                return ResourceManager.GetString("START_DATE_CANNOT_PAST", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Start date is invalid..
+        /// </summary>
+        public static string START_DATE_INVALID {
+            get {
+                return ResourceManager.GetString("START_DATE_INVALID", resourceCulture);
             }
         }
         
