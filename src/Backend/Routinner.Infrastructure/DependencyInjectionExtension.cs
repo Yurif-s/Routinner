@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Routinner.Domain.Repositories;
+using Routinner.Domain.Repositories.Routine;
+using Routinner.Domain.Repositories.User;
 using Routinner.Domain.Security.Cryptography;
 using Routinner.Infrastructure.DataAccess;
 using Routinner.Infrastructure.DataAccess.Repositories;
@@ -38,6 +40,7 @@ public static class DependencyInjectionExtension
         services.AddScoped<IUnitOfWork, UnitOfWork>();
         services.AddScoped<IUserReadOnlyRepository, UserRepository>();
         services.AddScoped<IUserWriteOnlyRepository, UserRepository>();
+        services.AddScoped<IRoutineWriteOnlyRepository, RoutineRepository>();
     }
     private static void AddPasswordHasher(IServiceCollection services)
     {

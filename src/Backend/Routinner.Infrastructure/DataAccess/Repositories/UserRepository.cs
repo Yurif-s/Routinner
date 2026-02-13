@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Routinner.Domain.Entities;
-using Routinner.Domain.Repositories;
+using Routinner.Domain.Repositories.User;
 
 namespace Routinner.Infrastructure.DataAccess.Repositories;
 
