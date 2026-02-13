@@ -1,5 +1,5 @@
 ﻿using Moq;
-using Routinner.Domain.Repositories;
+using Routinner.Domain.Repositories.User;
 
 namespace CommonTestUtilities.Repositories;
 
