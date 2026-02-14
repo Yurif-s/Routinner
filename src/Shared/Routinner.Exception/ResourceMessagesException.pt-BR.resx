@@ -138,14 +138,8 @@
   <data name="START_DATE_CANNOT_PAST" xml:space="preserve">
     <value>Data de início não pode ser no passado.</value>
   </data>
-  <data name="START_DATE_INVALID" xml:space="preserve">
-    <value>Data de início é inválida.</value>
-  </data>
   <data name="UNKNOW_ERROR" xml:space="preserve">
     <value>Erro desconhecido.</value>
-  </data>
-  <data name="END_DATE_INVALID" xml:space="preserve">
-    <value>Data de término é inválida.</value>
   </data>
   <data name="USER_NOT_FOUND" xml:space="preserve">
     <value>Usuário não encontrado.</value>

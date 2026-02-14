@@ -88,15 +88,6 @@ namespace Routinner.Exception {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a End date is invalid..
-        /// </summary>
-        public static string END_DATE_INVALID {
-            get {
-                return ResourceManager.GetString("END_DATE_INVALID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a The email is invalid..
         /// </summary>
         public static string INVALID_EMAIL {
@@ -129,15 +120,6 @@ namespace Routinner.Exception {
         public static string START_DATE_CANNOT_PAST {
             get {
                 return ResourceManager.GetString("START_DATE_CANNOT_PAST", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Start date is invalid..
-        /// </summary>
-        public static string START_DATE_INVALID {
-            get {
-                return ResourceManager.GetString("START_DATE_INVALID", resourceCulture);
             }
         }
         
