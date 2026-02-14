@@ -7,5 +7,5 @@ internal class RoutineRepository : IRoutineWriteOnlyRepository
 {
     private readonly RoutinnerDbContext _dbContext;
     public RoutineRepository(RoutinnerDbContext dbContext) => _dbContext = dbContext;
-    public async Task Add(Routine routine) => await _dbContext.AddAsync(routine);
+    public async Task Add(Routine routine) => await _dbContext.Routines.AddAsync(routine);
 }

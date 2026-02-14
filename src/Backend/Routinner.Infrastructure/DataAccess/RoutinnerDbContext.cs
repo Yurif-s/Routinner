@@ -12,6 +12,7 @@ internal class RoutinnerDbContext : DbContext
     }
 
     public DbSet<User> Users { get; set; }
+    public DbSet<Routine> Routines { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder) 
         => modelBuilder.ApplyConfigurationsFromAssembly(typeof(RoutinnerDbContext).Assembly);

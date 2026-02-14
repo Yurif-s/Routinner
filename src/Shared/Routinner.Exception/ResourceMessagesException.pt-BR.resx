@@ -147,4 +147,7 @@
   <data name="END_DATE_INVALID" xml:space="preserve">
     <value>Data de término é inválida.</value>
   </data>
+  <data name="USER_NOT_FOUND" xml:space="preserve">
+    <value>Usuário não encontrado.</value>
+  </data>
 </root>

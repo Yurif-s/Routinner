@@ -7,7 +7,7 @@ public class Version02 : VersionsBase
 {
     public override void Up()
     {
-        CreateTable("Routine")
+        CreateTable("Routines")
            .WithColumn("Name").AsString(255).NotNullable()
            .WithColumn("StartDate").AsDate().NotNullable()
            .WithColumn("EndDate").AsDate().NotNullable();
