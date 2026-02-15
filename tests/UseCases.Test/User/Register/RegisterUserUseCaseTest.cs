@@ -1,4 +1,5 @@
 ﻿using CommonTestUtilities.Repositories;
+using CommonTestUtilities.Repositories.Users;
 using CommonTestUtilities.Requests;
 using CommonTestUtilities.Security.Cryptography;
 using Routinner.Application.UseCases.User.Register;

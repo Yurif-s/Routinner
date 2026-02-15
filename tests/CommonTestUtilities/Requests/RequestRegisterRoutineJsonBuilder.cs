@@ -11,6 +11,7 @@ public static class RequestRegisterRoutineJsonBuilder
             .RuleFor(routine => routine.Name, f => f.Lorem.Word())
             .RuleFor(r => r.StartDate, f => DateOnly.FromDateTime(f.Date.Future()))
             .RuleFor(r => r.EndDate, (f, r) =>
-                DateOnly.FromDateTime(f.Date.Future(refDate: r.StartDate.ToDateTime(TimeOnly.MinValue))));
+                DateOnly.FromDateTime(f.Date.Future(refDate: r.StartDate.ToDateTime(TimeOnly.MinValue))))
+            .RuleFor(r => r.UserId, f => f.Random.Number(min: 1));
     }
 }

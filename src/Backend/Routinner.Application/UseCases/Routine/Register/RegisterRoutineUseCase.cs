@@ -45,7 +45,7 @@ public class RegisterRoutineUseCase : IRegisterRoutineUsecase
         var userExist = await _userRepository.ExistUserWithId(request.UserId);
 
         if (!userExist)
-            result.Errors.Add(new ValidationFailure(string.Empty, ResourceMessagesException.USER_NOT_FOUND));
+            throw new NotFoundException(ResourceMessagesException.USER_NOT_FOUND);
 
         if (!result.IsValid)
             throw new ErrorOnValidationException(result.Errors.Select(f => f.ErrorMessage).ToList());

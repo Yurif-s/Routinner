@@ -1,7 +1,7 @@
 ﻿using Moq;
 using Routinner.Domain.Repositories.User;
 
-namespace CommonTestUtilities.Repositories;
+namespace CommonTestUtilities.Repositories.Users;
 
 public class UserReadOnlyRepositoryBuilder
 {
@@ -9,5 +9,7 @@ public class UserReadOnlyRepositoryBuilder
     public UserReadOnlyRepositoryBuilder() => _repository = new Mock<IUserReadOnlyRepository>();
     public void ExistActiveUserWithEmail(string email) => 
         _repository.Setup(repo => repo.ExistActiveUserWithEmail(email)).ReturnsAsync(true);
+    public void ExistUserWithId(long id) =>
+        _repository.Setup(repo => repo.ExistUserWithId(id)).ReturnsAsync(true);
     public IUserReadOnlyRepository Build() => _repository.Object;
 }

@@ -1,7 +1,7 @@
 ﻿using Moq;
 using Routinner.Domain.Repositories.User;
 
-namespace CommonTestUtilities.Repositories;
+namespace CommonTestUtilities.Repositories.Users;
 
 public class UserWriteOnlyRepositoryBuilder
 {
