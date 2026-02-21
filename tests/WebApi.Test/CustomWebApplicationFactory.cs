@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using CommonTestUtilities.Entities;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -24,6 +25,22 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
                     opt.UseInMemoryDatabase("InMemoryDbForTest");
                     opt.UseInternalServiceProvider(provider);
                 });
+
+                using var scope = s.BuildServiceProvider().CreateScope();
+
+                var dbContext = scope.ServiceProvider.GetRequiredService<RoutinnerDbContext>();
+
+                dbContext.Database.EnsureDeleted();
+
+                StartDatabase(dbContext);
             });
+    }
+    private void StartDatabase(RoutinnerDbContext dbContext)
+    {
+        var user = UserBuilder.Build();
+
+        dbContext.Users.Add(user);
+
+        dbContext.SaveChanges();
     }
 }

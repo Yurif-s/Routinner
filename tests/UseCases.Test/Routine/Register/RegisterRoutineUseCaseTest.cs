@@ -43,7 +43,7 @@ public class RegisterRoutineUseCaseTest
     public async Task Error_Not_Exist_User_With_Id()
     {
         var request = RequestRegisterRoutineJsonBuilder.Build();
-        var useCase = CreateUseCase();
+        var useCase = CreateUseCase(0);
 
         Func<Task> act = async () => await useCase.Execute(request);
 
