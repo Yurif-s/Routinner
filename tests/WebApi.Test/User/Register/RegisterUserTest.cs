@@ -29,7 +29,7 @@ public class RegisterUserTest : IClassFixture<CustomWebApplicationFactory>
     }
     [Theory]
     [ClassData(typeof(CultureInlineDataTest))]
-    public async Task Error_Empty_Name(string culture)
+    public async Task Error_Name_Empty(string culture)
     {
         var request = RequestRegisterUserJsonBuilder.Build();
         request.Name = string.Empty;

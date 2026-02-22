@@ -55,7 +55,7 @@ public class RegisterRoutineUseCaseTest
             exception.ShouldContain(ResourceMessagesException.USER_NOT_FOUND);
         });
     }
-    private RegisterRoutineUseCase CreateUseCase(long id = 0)
+    private static RegisterRoutineUseCase CreateUseCase(long id = 0)
     {
         var routineRepository = RoutineWriteOnlyRepositoryBuilder.Build();
         var userRepository = new UserReadOnlyRepositoryBuilder();

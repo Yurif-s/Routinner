@@ -58,7 +58,7 @@ public class RegisterUserUseCaseTest
             exception.ShouldContain(ResourceMessagesException.NAME_EMPTY);
         });
     }
-    private RegisterUserUseCase CreateUseCase(string? email = null)
+    private static RegisterUserUseCase CreateUseCase(string? email = null)
     {
         var passwordHasher = PasswordHasherBuilder.Build();
         var unitOfWork = UnitOfWorkBuilder.Build();

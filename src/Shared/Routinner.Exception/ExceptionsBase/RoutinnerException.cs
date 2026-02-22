@@ -2,7 +2,7 @@
 
 public abstract class RoutinnerException : SystemException
 {
-    public RoutinnerException(string message) : base(message) 
+    protected RoutinnerException(string message) : base(message) 
     { }
 
     public abstract int StatusCode { get; }

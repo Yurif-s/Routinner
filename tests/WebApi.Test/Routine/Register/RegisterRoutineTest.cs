@@ -28,7 +28,7 @@ public class RegisterRoutineTest : IClassFixture<CustomWebApplicationFactory>
     }
     [Theory]
     [ClassData(typeof(CultureInlineDataTest))]
-    public async Task Error_Empty_Name(string culture)
+    public async Task Error_Name_Empty(string culture)
     {
         var request = RequestRegisterRoutineJsonBuilder.Build();
         request.Name = string.Empty;
