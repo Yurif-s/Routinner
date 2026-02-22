@@ -35,7 +35,7 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
                 StartDatabase(dbContext);
             });
     }
-    private void StartDatabase(RoutinnerDbContext dbContext)
+    private static void StartDatabase(RoutinnerDbContext dbContext)
     {
         var user = UserBuilder.Build();
 
